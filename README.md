@@ -4,5 +4,5 @@
 ```
 type PropertyType = boolean | number | string;
 type ShallowType = Record<string, PropertyType>;
-type EntityType = Record<string, PropertyType | ShallowType>;
+type ComplexType = Record<string, PropertyType | ShallowType>;
 ```
