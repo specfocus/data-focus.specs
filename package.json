@@ -1,0 +1,22 @@
+{
+  "name": "data-focus",
+  "version": "1.0.0",
+  "description": "```typescript\r const NUMBER_PROPERTY_KINDS = ['byte', 'float', 'double', 'int32', 'int64', 'timestamp', 'uint32', 'uint64'] as const;\r const STRING_PROPERTY_KINDS = ['camelcase', 'code', 'date', 'identifier', 'literal', 'snakecase', 'time'] as const;",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/specfocus/data-focus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/specfocus/data-focus/issues"
+  },
+  "homepage": "https://github.com/specfocus/data-focus#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
