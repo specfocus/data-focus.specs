@@ -23,6 +23,7 @@ interface StringPropertySchema {
 type PropertySchema = BooleanPropertySchema | NumberPropertySchema | StringPropertySchema;
 
 interface ShallowObjectSchema {
+  $type: 'object';
   [K: string]: PropertySchema;
 }
 
