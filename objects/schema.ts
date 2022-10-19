@@ -15,17 +15,32 @@ export interface ObjectPropertySchema {
   $type: ObjectPropertyType;
 }
 
+export const IDENTITY = 'identity';
+
+export type IdentityPropertyKind = typeof IDENTITY;
+
+export interface IdentityPropertySchema {
+  $kind: IdentityPropertyKind;
+  $type: StringPropertyType;
+}
+
 export const NAVIGATION = 'navigation';
 
 export type NavigationPropertyKind = typeof NAVIGATION;
 
 export interface NavigationPropertySchema {
-  $collection: string;
   $kind: NavigationPropertyKind;
   $nullable: boolean | undefined;
+  $source: string; // collection name
   $type: StringPropertyType;
 }
 
-export interface Schema {
-  $props: Record<string, NavigationPropertySchema | ObjectPropertySchema | PrimitivePropertySchema>;
+export type PropertySchema =
+  IdentityPropertySchema |
+  NavigationPropertySchema |
+  ObjectPropertySchema |
+  PrimitivePropertySchema;
+
+export interface EntitySchema {
+  $props: Record<string, PropertySchema>;
 }
